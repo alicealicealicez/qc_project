@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#$ -P bf528
+#$ -cwd
+
+source /etc/bashrc
+
+module load python3/3.7.9
+module load multiqc
+
+multiqc -o ./qcreport/fastq/ ./fastqc_output/
+multiqc -o ./qcreport/bam/ ./star_output/

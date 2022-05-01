@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#$ -P bf528
+#$ -cwd
+#$ -pe omp 16
+
+source /etc/bashrc
+
+module load gcc/8.3.0 star/2.6.0c
+
+dir=/project/bf528/project_3/reference/rn4_STAR
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177966_1.fastq.gz samples/SRR1177966_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177966_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177969_1.fastq.gz samples/SRR1177969_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177969_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177970_1.fastq.gz samples/SRR1177970_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177970_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177993_1.fastq.gz samples/SRR1177993_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177993_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177994_1.fastq.gz samples/SRR1177994_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177994_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1177995_1.fastq.gz samples/SRR1177995_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1177995_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1178001_1.fastq.gz samples/SRR1178001_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1178001_ --outSAMtype BAM SortedByCoordinate
+
+STAR --genomeDir $dir --runThreadN 16 --readFilesIn samples/SRR1178003_1.fastq.gz samples/SRR1178003_2.fastq.gz --readFilesCommand zcat --outFileNamePrefix star_output/SRR1178003_ --outSAMtype BAM SortedByCoordinate
+
