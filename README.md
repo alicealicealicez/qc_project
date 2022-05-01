@@ -1,1 +1,2 @@
-# Individual-Project-Alice-Zheng
+# Individual Project
+Alice Zheng
